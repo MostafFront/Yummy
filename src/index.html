@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="../../dist/output.css">
+    <title>Yummy</title>
+</head>
+<body class="bg-[#0D0D0D] text-[#f9f6f6] overflow-hidden">
+
+    <div class="loading-screen  absolute flex justify-center items-center top-0 start-0 end-0 bottom-0 bg-black z-50 ">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <div class="side-nav-menu min-h-full fixed flex top-0 z-50 bg-[#0D0D0D]">
+        <div class="nav-links flex justify-between flex-col min-h-full p-6">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="showSearchInputs(); closeSideNav()" class="py-2 relative cursor-pointer">Search</li>
+                    <li onclick="getCategories(); closeSideNav()" class="py-2 relative cursor-pointer">Categories</li>
+                    <li onclick="getArea(); closeSideNav()" class="py-2 relative cursor-pointer">Area</li>
+                    <li onclick="getIngredients(); closeSideNav()" class="py-2 relative cursor-pointer">Ingredients</li>
+                    <li onclick="showContacts(); closeSideNav()" class="py-2 relative cursor-pointer">Contact Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook cursor-pointer"></i>
+                    <i class="fa-brands fa-twitter cursor-pointer"></i>
+                    <i class="fa-solid fa-globe cursor-pointer"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-toggle flex justify-between text-center flex-col py-4 px-2 bg-white text-black">
+            <img class="w-12" src="../image/logo.png" alt="Yummy">
+            <i class="fa-solid open-close-icon fa-align-justify fa-2x cursor-pointer"></i>
+            <div>
+                <i class="fa-solid fa-globe block cursor-pointer"></i>
+                <i class="fa-solid fa-share-nodes cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container w-3/4 relative " style="left: 15%;" id="searchContainer"></div>
+  
+
+
+
+
+
+    <div class=" relative justify-center items-center flex pt-10">
+        <div class="inner-loading-screen absolute flex justify-center items-center top-0 start-0 end-0 bottom-0 bg-black z-10">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        
+    
+        <div class="container">
+            <div class="flex flex-row flex-wrap " id="rowData">
+                
+            </div>
+        </div>
+    </div>
+
+   <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
